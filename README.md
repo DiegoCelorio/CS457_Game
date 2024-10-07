@@ -18,36 +18,36 @@ This is a simple Battle Ship game implemented using Python and sockets.
     
 # Statement of Work (SOW) Template for Socket Programming Project
 Project Title:
-* [Insert Project Title]
+* Dynamite Battleship Guardians
 
 Team:
-* [Insert members of team]
+* Diego Celorio
 
 Project Objective:
-* [Briefly describe the goal of the project. What problem are you trying to solve or what functionality are you aiming to achieve?]
+* The goal is to be able to make a fully functioning server and client that will allow users to play battleship against each other!
 
 Scope:
 Inclusions:
-* [List the specific tasks, features, or components that will be included in the project.]
+* We will include gameplay, communication between client and server
 Exclusions:
-* [List any tasks, features, or components that will not be included in the project.]
+* No rough housing or uncool players.
 Deliverables:
-* [List the expected outputs or deliverables from the project, such as a working Python script, documentation, or presentations.]
+* Easy to read and understand python scripts, proper documentation.
 Timeline:
 Key Milestones:
-* [Outline the major milestones or checkpoints throughout the project, with estimated completion dates.]
+* Each sprint so like Sprint 1: server and client.
 Task Breakdown:
-* [Create a detailed breakdown of tasks, assigning estimated hours or days to each.]
+* Task breakdown is loose and will tackle them as they come
 Technical Requirements:
 Hardware:
-* [Specify any hardware requirements, such as servers, networking equipment, or specific devices.]
+* No hardware requirements
 Software:
-* [List the necessary software tools, programming languages (Python), libraries (socket, threading, etc.), and operating systems.]
+* Python and sockets
 Assumptions:
-* [State any assumptions that are being made about the project, such as network connectivity or availability of resources.]
+* Will assume that network is safe and can handle communication
 Roles and Responsibilities:
-* [Define the roles of team members, including project manager, developers, testers, etc., and their responsibilities.]
+* Everything: Diego Celorio
 Communication Plan:
-* [Outline the communication channels and frequency for project updates, meetings, and decision-making.]
+* All communication is within my skull walls
 Additional Notes:
-* [Include any other relevant information or considerations that are specific to your project.]
+* Hope you enjoy!
