@@ -9,6 +9,18 @@ host, port = sys.argv[1], int(sys.argv[2])
 address = (host, port)
 BUFFER_SIZE = 1024
 
+def handle_server_response(response):
+    data = json.loads(response)
+    msg_type = data.get('type')
+    if msg_type == 'status':
+        print(f"Game Status: {data['payload']['message']}")
+        print("Players: ")
+        for player in data['payload']['players']:
+            print(f"- {player['player name']} at {player['position']}")
+    else:
+        print("Unknown message received")
+
+
 if len(sys.argv) != 3:
     print("[-] Usage:", sys.argv[0], "<host> <port>")
     sys.exit(1)
@@ -93,14 +105,3 @@ except Exception as e:
 finally:
     print(f"[*] Disconnected from {host}:{port}")
     client.close()
-
-def handle_server_response(response):
-    data = json.loads(response)
-    msg_type = data.get('type')
-    if msg_type == 'status':
-        print(f"Game Status: {data['payload']['message']}")
-        print("Players: ")
-        for player in data['payload']['players']:
-            print(f"- {player['player name']} at {player['position']}")
-    else:
-        print("Unknown message received")
