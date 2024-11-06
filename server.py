@@ -4,7 +4,6 @@ import socket
 import sys
 import json
 
-
 logging.basicConfig(level=logging.INFO)
 sel = selectors.DefaultSelector()
 
@@ -12,17 +11,21 @@ host = sys.argv[1]
 port = int(sys.argv[2])
 address = (host, port)
 BUFFER_SIZE = 1024
+
 clients = {}
+current_turn = None
 
 if len(sys.argv) != 3:
     print("[-] Usage:", sys.argv[0], "<host> <port>")
     sys.exit(1)
+
 
 def accept(server, mask):
     client_socket, client_address = server.accept()
     print(f"[*] New client connection established from {client_address}")
     client_socket.setblocking(False)
     sel.register(client_socket, selectors.EVENT_READ, read)
+
 
 def read(client_socket, mask):
     try:
@@ -36,6 +39,7 @@ def read(client_socket, mask):
     except:
         close_client(client_socket)
 
+
 def close_client(client_socket):
     sel.unregister(client_socket)
     client_socket.close()
@@ -46,6 +50,8 @@ def close_client(client_socket):
             del clients[client_id]
             broadcast_status(f"Player {info['name']} left the game.")
             break
+        update_turn()
+
 
 def handle_message(client_socket, message):
     try:
@@ -64,40 +70,60 @@ def handle_message(client_socket, message):
     except:
         print(f"[*] Invalid message from client try: 'join', 'move, 'chat' or use 'quit' to exit.")
 
+
 def handle_join(client_socket, payload):
     player_name = payload.get('player_name')
     client_id = len(clients) + 1
-    clients[client_id] = {'name': player_name}
-    print(f"[+] Player {player_name} joined the game")
-    broadcast_status(f"Player {player_name} joined the game")
+    clients[client_id] = {
+        'name': player_name,
+        'id' : client_id
+        }
+    broadcast_status(f"[+] Player {player_name} joined the game")
+
 
 def handle_move(client_socket, payload):
     player_move = payload.get('position')
     for client_id, info in clients.items():
-        if info['socket'] == client_socket:
+        if info['socket'] == client_socket and client_id == current_turn:
             info['position'] = player_move
-            print(f"[+] Player {info['name']} striked {player_move}")
-            broadcast_status(f"Player {info['name']} striked {player_move}")
+            broadcast_status(f"[+] Player {info['name']} striked {player_move}")
+            update_turn()
             break
+
 
 def handle_chat(client_socket, payload):
     player_chat = payload.get('message')
     for client_id, info in clients.items():
         if info['socket'] == client_socket:
-            print(f"[*] Player {info['name']} said {player_chat}")
-            broadcast_status(f"Player {info['name']} : {player_chat}")
+            broadcast_status(f"[*] {info['name']} : {player_chat}")
             break
+
 
 def broadcast_status(status_message):
     status = json.dumps({
         "type": "status",
         "payload": {
             'players': [{'player_name': info['name'], 'position': info['position']} for info in clients.values()],
-            'message': status_message
+            'message': status_message,
+            'current_turn' : current_turn
         }
     })
     for client in clients.values():
         client['socket'].send(status.encode())
+
+
+def broadcast_chat(chat_message):
+    chat = {'type': 'chat', 'payload': {'message': chat_message}}
+    for client in clients.values():
+        client['socket'].send(json.dumps(chat).encode())
+
+
+def update_turn():
+    global current_turn
+    if clients:
+        current_turn = (current_turn + 1) % len(clients) if current_turn is not None else 1
+        broadcast_status(f"It is now {clients[current_turn]['name']}'s turn.")
+
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
