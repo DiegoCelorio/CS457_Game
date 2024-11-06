@@ -27,27 +27,39 @@ Project Objective:
 * The goal is to be able to make a fully functioning server and client that will allow users to play battleship against each other!
 
 Scope:
+
 Inclusions:
 * We will include gameplay, communication between client and server
+  
 Exclusions:
 * No rough housing or uncool players.
+  
 Deliverables:
 * Easy to read and understand python scripts, proper documentation.
+  
 Timeline:
 Key Milestones:
 * Each sprint so like Sprint 1: server and client.
+  
 Task Breakdown:
 * Task breakdown is loose and will tackle them as they come
+  
 Technical Requirements:
+
 Hardware:
 * No hardware requirements
+  
 Software:
 * Python and sockets
+  
 Assumptions:
 * Will assume that network is safe and can handle communication
+  
 Roles and Responsibilities:
 * Everything: Diego Celorio
+  
 Communication Plan:
 * All communication is within my skull walls
+  
 Additional Notes:
 * Hope you enjoy!
