@@ -344,3 +344,59 @@ jinja2.exceptions.TemplateNotFound: index.html
 2024-12-09 09:40:16,695 - INFO - 127.0.0.1 - - [09/Dec/2024 09:40:16] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
 2024-12-09 09:40:20,159 - INFO - Server closed by user
 2024-12-09 09:40:20,160 - INFO - Server shut down
+2024-12-09 09:56:44,125 - INFO - Server started listening
+2024-12-09 09:56:44,131 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:56:44,131 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:56:46,928 - INFO - 127.0.0.1 - - [09/Dec/2024 09:56:46] "GET / HTTP/1.1" 200 -
+2024-12-09 09:56:46,956 - INFO - 127.0.0.1 - - [09/Dec/2024 09:56:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:56:51,509 - INFO - 127.0.0.1 - - [09/Dec/2024 09:56:51] "POST /join HTTP/1.1" 200 -
+2024-12-09 09:56:54,584 - INFO - 127.0.0.1 - - [09/Dec/2024 09:56:54] "GET /current_question HTTP/1.1" 200 -
+2024-12-09 09:56:55,967 - INFO - 127.0.0.1 - - [09/Dec/2024 09:56:55] "GET /game_status HTTP/1.1" 200 -
+2024-12-09 09:57:06,148 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:06] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:57:08,931 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:08] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:57:10,715 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:10] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:57:11,184 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:11] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:57:11,517 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:11] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:57:12,149 - INFO - Quiz is over
+2024-12-09 09:57:12,150 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:12] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:57:13,683 - INFO - Quiz is over
+2024-12-09 09:57:13,684 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:13] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:57:17,097 - INFO - Game started by Diego
+2024-12-09 09:57:17,097 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:17] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:57:19,849 - INFO - Quiz is over
+2024-12-09 09:57:19,850 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:19] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:57:20,049 - INFO - Quiz is over
+2024-12-09 09:57:20,050 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:20] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:57:20,232 - INFO - Quiz is over
+2024-12-09 09:57:20,233 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:20] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:57:20,433 - INFO - Quiz is over
+2024-12-09 09:57:20,434 - INFO - 127.0.0.1 - - [09/Dec/2024 09:57:20] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:58:08,821 - INFO - Server closed by user
+2024-12-09 09:58:08,822 - INFO - Server shut down
+2024-12-09 09:58:12,347 - INFO - Server started listening
+2024-12-09 09:58:12,351 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:58:12,351 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:58:14,129 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:14] "GET / HTTP/1.1" 200 -
+2024-12-09 09:58:14,151 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:58:17,349 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:17] "GET /current_question HTTP/1.1" 200 -
+2024-12-09 09:58:23,337 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:23] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:58:24,600 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:24] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:58:33,068 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:33] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:58:33,650 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:33] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:58:36,266 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:36] "GET /current_question HTTP/1.1" 200 -
+2024-12-09 09:58:36,816 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:36] "GET /game_status HTTP/1.1" 200 -
+2024-12-09 09:58:52,934 - INFO - 127.0.0.1 - - [09/Dec/2024 09:58:52] "GET /game_status HTTP/1.1" 200 -
+2024-12-09 09:58:56,968 - INFO - Server closed by user
+2024-12-09 09:58:56,968 - INFO - Server shut down
+2024-12-09 09:58:58,946 - INFO - Server started listening
+2024-12-09 09:58:58,950 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:58:58,951 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:59:00,912 - INFO - 127.0.0.1 - - [09/Dec/2024 09:59:00] "GET / HTTP/1.1" 200 -
+2024-12-09 09:59:00,934 - INFO - 127.0.0.1 - - [09/Dec/2024 09:59:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:59:03,434 - INFO - 127.0.0.1 - - [09/Dec/2024 09:59:03] "GET /game_status HTTP/1.1" 200 -
+2024-12-09 09:59:09,437 - INFO - 127.0.0.1 - - [09/Dec/2024 09:59:09] "POST /join HTTP/1.1" 200 -
+2024-12-09 09:59:12,683 - INFO - Server closed by user
+2024-12-09 09:59:12,684 - INFO - Server shut down

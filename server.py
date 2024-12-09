@@ -59,11 +59,15 @@ def start_game():
 
 @app.route('/game_status', methods=['GET'])
 def game_status():
+    if game.started == False:
+        return jsonify({"error": "Game has not been started"})
     return jsonify({"players": game.players, "started": game.started, "host": game.host}), 200
 
 
 @app.route('/submit_answer', methods=['POST'])
 def submit_answer():
+    if game.started == False:
+        return jsonify({"error": "Game has not been started"})
     username = request.json.get("username")
     answer = request.json.get("answer")
     if not username or not answer:
@@ -74,6 +78,8 @@ def submit_answer():
 
 @app.route('/next_question', methods=['POST'])
 def next_question():
+    if game.started == False:
+        return jsonify({"error": "Game has not been started"})
     response = game.next_question()
     if response == "Quiz is over! Check leaderboard":
         leaderboard = game.get_leaderboard()
