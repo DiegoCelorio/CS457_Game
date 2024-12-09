@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+        <title>
+            Game Client
+        </title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <h1>Welcome to Quiz Mania</h1>
+        <div id="game-container">
+            <button id="join-btn">Join Game</button>
+            <button id="start-btn">Start Game</button>
+            <button id="status-btn">Get Game Status</button>
+            <button id="current-qtn-btn">Get Current Question</button>
+            <button id="submit-btn">Submit Answer</button>
+            <button id="next-btn">Next Question</button>
+            <button id="leader-btn">Leaderboard</button>
+            <div id="output"></div>
+        </div>
+        <script>
+            document.getElementById('join-btn').addEventListener('click', async () => {
+                const username = prompt("Enter username:");
+                if(!username) return;
+                const response = await fetch('/join', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ username })
+                });
+                const data = await response.json();
+                document.getElementById('output').innerText = data.message || data.error;
+            });
+
+            document.getElementById('start-btn').addEventListener('click', async () => {
+                const username = prompt("Enter username:");
+                if(!username) return;
+                const response = await fetch('/start', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ username })
+                });
+                const data = await response.json();
+                document.getElementById('output').innerText = data.message || data.error;
+            });
+
+            document.getElementById('status-btn').addEventListener('click', async () => {
+                const response = await fetch('/game_status');
+                const data = await response.json();
+                document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+            });
+
+            document.getElementById('current-qtn-btn').addEventListener('click', async () => {
+                const response = await fetch('/current_question');
+                const data = await response.json();
+                document.getElementById('output').innerText = data.message || "Error fetching question";
+            });
+
+            document.getElementById('submit-btn').addEventListener('click', async () => {
+                const username = prompt("Enter username:");
+                const answer = prompt("Enter answer:");
+                if(!username || !answer) return;
+                const response = await fetch('/submit_answer', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ username, answer })
+                });
+                const data = await response.json();
+                document.getElementById('output').innerText = data.message || data.error;
+            });
+
+            document.getElementById('next-btn').addEventListener('click', async () => {
+                const response = await fetch('/next_question', { method: 'POST' });
+                const data = await response.json();
+                document.getElementById('output').innerText = data.message || "Error fetching question";
+            });
+
+            document.getElementById('leader-btn').addEventListener('click', async () => {
+                const response = await fetch('/leaderboard');
+                const data = await response.json();
+                if (data.leaderboard){
+                    const leaderboard = data.leaderboard.map(
+                        (entry, index) => `${index + 1}. ${entry[0]}: ${entry[1]} points`
+                    ).join('\n')
+                    document.getElementById('output').innerText = data.leaderboard;
+                }
+                else{
+                    document.getElementById('output').innerText = data.message;
+                }
+            });
+
+        </script>
+    </body>
+</html>

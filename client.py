@@ -1,123 +1,173 @@
 import socket
 import sys
 import selectors
-import json
+import traceback
+import logging
+import requests
+
+import libclient
 
 sel = selectors.DefaultSelector()
 BUFFER_SIZE = 1024
-current_turn = None
 
-def handle_server_response(response):
-    data = json.loads(response)
-    msg_type = data.get('type')
+logging.basicConfig(
+    filename='client.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
-    if msg_type == 'status':
-        players = data['payload']['players']
-        current_turn = data['payload']['current_turn']
-        message = data['payload']['message']
-
-        print(f"Game Status: {message}")
-        print("Players: ")
-        for player in players:
-            print(f"- {player['player name']} at {player['position']}")
-    elif msg_type == 'chat':
-        print(f"{data['payload']['players']['player name']} : {data['message']['payload']}")
-    else:
-        print("Unknown message received")
+SERVER_HTTP_PORT_OFFSET = 1
 
 
-if len(sys.argv) != 3:
-    print("[-] Usage:", sys.argv[0], "<host> <port>")
-    sys.exit(1)
+def create_request(msg_type, value):
+    return dict(
+        type="text/json",
+        encoding="utf-8",
+        content=dict(msg_type=msg_type, value=value)
+    )
 
-def main():
-    host, port = sys.argv[1], int(sys.argv[2])
+
+def start_connection(host, port, request):
     address = (host, port)
+    print(f"Starting connection to: {address}")
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.setblocking(False)
+    sock.connect_ex(address)
+    events = selectors.EVENT_READ | selectors.EVENT_WRITE
+    message = libclient.Message(sel, sock, address, request)
+    sel.register(sock, events, data=message)
 
-    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.setblocking(False)
+
+def join_game_http(host, port, username):
+    url = f"http://{host}:{port}/join"
+    payload = {"username": username}
 
     try:
-        client.connect_ex(address)
-        print(f"[*] Connected to {host}:{port}")
+        response = requests.post(url, json=payload)
+        if response.status_code == 200:
+            print(response.json().get("message"))
+        else:
+            print(f"Error: {response.json().get('error')}")
+    except Exception as e:
+        print(f"Failed to join game via HTTP: {e}")
 
-        sel.register(client, selectors.EVENT_READ, selectors.EVENT_WRITE)
 
-        player_name = input("Enter player name: ")
-        join_message = json.dumps({
-            "type":"join",
-            "payload": {"player_name" : player_name}
-        })
-        client.send(join_message.encode())
+def start_game_http(host, port, username):
+    url = f"http://{host}:{port}/start"
+    payload = {"username": username}
 
+    try:
+        response = requests.post(url, json=payload)
+        if response.status_code == 200:
+            print(response.json().get("message"))
+        else:
+            print(f"Error: {response.json().get('error')}")
+    except Exception as e:
+        print(f"Failed to start game via HTTP: {e}")
+
+
+def get_game_status_http(host, port):
+    url = f"http://{host}:{port}/join"
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            game_status = response.json()
+            print(f"Game Status: {game_status}")
+        else:
+            print(f"Error: {response.json().get('error')}")
+    except Exception as e:
+        print(f"Failed to fetch game status via HTTP: {e}")
+
+
+def submit_answer_http(host, port, username, answer):
+    url = f"http://{host}:{port}/submit_answer"
+    payload = {"username": username, "answer": answer}
+
+    try:
+        response = requests.post(url, json=payload)
+        if response.status_code == 200:
+            print(response.json().get("message"))
+        else:
+            print(f"Error: {response.json().get('error')}")
+    except Exception as e:
+        print(f"Failed to start game via HTTP: {e}")
+
+
+def get_next_question_http(host, port, username):
+    url = f"http://{host}:{port}/next_question"
+    try:
+        response = requests.post(url)
+        if response.status_code == 200:
+            print(response.json().get("message"))
+        else:
+            print(f"Error: {response.json().get('error')}")
+    except Exception as e:
+        print(f"Failed to start game via HTTP: {e}")
+
+
+def main():
+    if len(sys.argv) != 3:
+        print("[-] Usage:", sys.argv[0], "<host> <port>")
+        sys.exit(1)
+
+    host, port = sys.argv[1], int(sys.argv[2])
+    http_port = port + SERVER_HTTP_PORT_OFFSET
+
+
+    print("Options:")
+    print("1. Join game via HTTP")
+    print("2. Get game status via HTTP")
+    print("3. Start game via HTTP")
+    print("4. Quit")
+
+    while True:
+        choice = input("Enter choice: ")
+        if choice == "1":
+            username = input("Enter your username: ")
+            join_game_http(host, http_port, username)
+        if choice == "2":
+            get_game_status_http(host, http_port)
+        if choice == "3":
+            username = input("Enter your username: ")
+            start_game_http(host, http_port, username)
+        elif choice == "4":
+            print("quitting")
+            sys.exit(1)
+    '''
+    msg_type = input("Enter name, or quit: ")
+    if msg_type == 'name':
+        value = input("Enter your name: ")
+    elif msg_type == "quit":
+        print("Client quitting")
+        sys.exit(1)
+
+    request = create_request(msg_type, value)
+    start_connection(host, port, request)
+
+    try:
         while True:
             events = sel.select(timeout=1)
-
             for key, mask in events:
-                if mask & selectors.EVENT_READ:
-                    try:
-                        response = client.recv(BUFFER_SIZE)
-
-                        if response:
-                            handle_server_response(response.decode())
-                        else:
-                            print("[-] Connection closed")
-                            sel.unregister(client)
-                            client.close()
-                            sys.exit(0)
-            
-                    except ConnectionResetError:
-                        print("[*] Connection reset by server")
-                        sel.unregister(client)
-                        client.close()
-                        sys.exit(1)
-            
-                if mask & selectors.EVENT_WRITE:
-                    message = input("Enter 'move', 'chat' or use 'exit' to quit: ")
-                    
-                    if message.lower() == 'exit':
-                        print("Client exiting")
-                        sel.unregister(client)
-                        client.close()
-                        sys.exit(0)
-
-                    elif message.lower() == 'move':
-                        if current_turn == player_name:
-                            player_move = input("Call your shot! (x,y): ").split(',')
-                            move_message = json.dumps({
-                                "type":"move",
-                                "payload": {
-                                    "position" : {"x": int(player_move[0]), "y": int(player_move[1])}
-                                }
-                            })
-                            client.send(move_message.encode())
-                        else:
-                            print("It is not your turn yet")
-
-                    elif message.lower() == 'chat':
-                        player_chat = input("Enter chat:")
-                        chat_message = json.dumps({
-                            "type":"chat",
-                            "payload": {
-                                "message": player_chat
-                            }
-                        })
-                        client.send(chat_message.encode())
-                
-                    client.sendall(message.encode())
-        
-    except ConnectionRefusedError:
-        print(f"[-] Unable to connect to {host}:{port}")
+                message = key.data
+                try: 
+                    message.process_events(mask)
+                except Exception:
+                    print(
+                        "Main: error: exception for",
+                        f"{message.address}:\n{traceback.format_exc()}",
+                    )
+                    message.close()
+            if not sel.get_map():
+                break
     
-    except socket.error as e:
-        print(f"[-] Socket error: {e}")
 
-    except Exception as e:
-        print(f"[-] Unexpected error: {e}")
-
+    except KeyboardInterrupt:
+        print(" Caught keyboard interrupt closing")
     finally:
-        print(f"[*] Disconnected from {host}:{port}")
-        client.close()
+        sel.close()
+
+'''
 
 if __name__ == "__main__":
     main()

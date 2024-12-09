@@ -1,143 +1,149 @@
+#!/usr/bin/env python3
+
 import logging
 import selectors
 import socket
 import sys
-import json
+import traceback
 
-logging.basicConfig(level=logging.INFO)
+import libserver as libserver
+
+from flask import Flask, jsonify, request, render_template
+from game import Game
+
+logging.basicConfig(
+    filename='server.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
 sel = selectors.DefaultSelector()
 
-host = sys.argv[1]
-port = int(sys.argv[2])
-address = (host, port)
-BUFFER_SIZE = 1024
+app = Flask(__name__, static_folder="static", template_folder="templates")
+game = Game()
 
-clients = {}
-current_turn = None
+def accept(socket):
+    client_conn, client_address = socket.accept()
+    print(f"[*] New client connection established from {client_address}")
+    logger.info(f"New player joined: {client_address}")
+    client_conn.setblocking(False)
+
+    message = libserver.Message(sel, client_conn, client_address)
+    sel.register(client_conn, selectors.EVENT_READ, data=message)
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/join', methods=['POST'])
+def join_game():
+    username = request.json.get("username")
+    if game.started == False:
+        return jsonify({"error": "Game has not been started"})
+    if not username:
+        return jsonify({"error": "Username is required"}), 400
+    response = game.join_game(username)
+    return jsonify({"message": response}), 200
+
+
+@app.route('/start', methods=['POST'])
+def start_game():
+    username = request.json.get("username")
+    if not username:
+        return jsonify({"error": "Username is required"}), 400
+    response = game.start_game(username)
+    return jsonify({"message": response}), 200
+
+
+@app.route('/game_status', methods=['GET'])
+def game_status():
+    return jsonify({"players": game.players, "started": game.started, "host": game.host}), 200
+
+
+@app.route('/submit_answer', methods=['POST'])
+def submit_answer():
+    username = request.json.get("username")
+    answer = request.json.get("answer")
+    if not username or not answer:
+        return jsonify({"error": "Username or answer is required"}), 400
+    response = game.submit_answer(username, answer)
+    return jsonify({"message": response}), 200
+
+
+@app.route('/next_question', methods=['POST'])
+def next_question():
+    response = game.next_question()
+    if response == "Quiz is over! Check leaderboard":
+        leaderboard = game.get_leaderboard()
+        return jsonify({"message": response, "leaderboard": leaderboard}), 200
+    return jsonify({"message": response}), 200
+
+
+@app.route('/current_question', methods=['GET'])
+def current_question():
+    question = game.get_current_question()
+    return jsonify({"question": question}), 200
+
+
+@app.route('/players_correct', methods=['GET'])
+def players_correct():
+    players = game.get_players_correct()
+    return jsonify({"players": players}), 200
+
+@app.route('/leaderborad', methods=['GET'])
+def leaderboard():
+    leaderboard = game.get_leaderboard()
+    if not leaderboard:
+        return jsonify({"error": "Error with leaderboard or no users got any questions right"}), 200
+    return jsonify({"leaderboard": leaderboard}), 200
+    
 
 if len(sys.argv) != 3:
     print("[-] Usage:", sys.argv[0], "<host> <port>")
     sys.exit(1)
 
+host, port = sys.argv[1], int(sys.argv[2])
+address = (host, port)
+game_port = port + 1 # Gameport is offset from http port
 
-def accept(server, mask):
-    client_socket, client_address = server.accept()
-    print(f"[*] New client connection established from {client_address}")
-    client_socket.setblocking(False)
-    sel.register(client_socket, selectors.EVENT_READ, read)
+lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+lsock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+lsock.setblocking(False)
 
+lsock.bind(address)
 
-def read(client_socket, mask):
-    try:
-        message = client_socket.recv(BUFFER_SIZE)
-        if message:
-            print(f"[+] Message: {message} received from {client_socket}")
-            # Echo back message to client
-            client_socket.send(message)
-        else:
-            close_client(client_socket)
-    except:
-        close_client(client_socket)
-
-
-def close_client(client_socket):
-    sel.unregister(client_socket)
-    client_socket.close()
-    print(f"[*] Client disconnected")
-
-    for client_id, info in list(clients.items()):
-        if info['socket'] == client_socket:
-            del clients[client_id]
-            broadcast_status(f"Player {info['name']} left the game.")
-            break
-        update_turn()
-
-
-def handle_message(client_socket, message):
-    try:
-        data = json.loads(message.decode())
-        msg_type = data.get('type')
-        payload = data.get('payload', {})
-
-        if msg_type == 'join':
-            handle_join(client_socket, payload)
-        elif msg_type == 'move':
-            handle_move(client_socket, payload)
-        elif msg_type == 'chat':
-            handle_chat(client_socket, payload)
-        elif msg_type == 'quit':
-            close_client(client_socket)
-    except:
-        print(f"[*] Invalid message from client try: 'join', 'move, 'chat' or use 'quit' to exit.")
-
-
-def handle_join(client_socket, payload):
-    player_name = payload.get('player_name')
-    client_id = len(clients) + 1
-    clients[client_id] = {
-        'name': player_name,
-        'id' : client_id
-        }
-    broadcast_status(f"[+] Player {player_name} joined the game")
-
-
-def handle_move(client_socket, payload):
-    player_move = payload.get('position')
-    for client_id, info in clients.items():
-        if info['socket'] == client_socket and client_id == current_turn:
-            info['position'] = player_move
-            broadcast_status(f"[+] Player {info['name']} striked {player_move}")
-            update_turn()
-            break
-
-
-def handle_chat(client_socket, payload):
-    player_chat = payload.get('message')
-    for client_id, info in clients.items():
-        if info['socket'] == client_socket:
-            broadcast_status(f"[*] {info['name']} : {player_chat}")
-            break
-
-
-def broadcast_status(status_message):
-    status = json.dumps({
-        "type": "status",
-        "payload": {
-            'players': [{'player_name': info['name'], 'position': info['position']} for info in clients.values()],
-            'message': status_message,
-            'current_turn' : current_turn
-        }
-    })
-    for client in clients.values():
-        client['socket'].send(status.encode())
-
-
-def broadcast_chat(chat_message):
-    chat = {'type': 'chat', 'payload': {'message': chat_message}}
-    for client in clients.values():
-        client['socket'].send(json.dumps(chat).encode())
-
-
-def update_turn():
-    global current_turn
-    if clients:
-        current_turn = (current_turn + 1) % len(clients) if current_turn is not None else 1
-        broadcast_status(f"It is now {clients[current_turn]['name']}'s turn.")
-
-
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server.setblocking(False)
-
-server.bind(address)
-
-server.listen()
+lsock.listen()
 print(f"[*] Listening on {host}:{port}")
+lsock.setblocking(False)
+logger.info('Server started listening')
 
-sel.register(server, selectors.EVENT_READ, accept)
+sel.register(lsock, selectors.EVENT_READ, data=None)
 
-while True:
-    events = sel.select()
-    for key, mask in events:
-        message = key.data
-        message(key.fileobj, mask)
+try: 
+    app.run(host=host, port=game_port)   
+    while True:
+        events = sel.select(timeout=None)
+        for key, mask in events:
+            if key.data is None:
+                accept(key.fileobj)
+            else:
+                message = key.data
+                try:
+                    message.process_events(mask)
+                except Exception as e:
+                    print(
+                        "Main: error: exception for",
+                        f"{message.address}:\n{traceback.format_exc()}",
+                    )
+                    message.close()
+                    logger.error(f"Error handling client: {e}")
+
+except KeyboardInterrupt:
+    print("Keyboard interrupt, exiting")
+    logger.info("Server closed by user")
+finally:
+    sel.close()
+    lsock.close()
+    logger.info("Server shut down")

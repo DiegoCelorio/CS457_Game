@@ -1,0 +1,346 @@
+2024-12-07 19:22:45,571 - INFO - New player joined: ('127.0.0.1', 55356)
+2024-12-07 19:22:45,572 - INFO - Server ready to write
+2024-12-07 19:22:45,572 - INFO - Username registered: Diego
+2024-12-07 19:22:45,572 - INFO - Server ready to read
+2024-12-07 19:23:01,791 - INFO - Server closed by user
+2024-12-07 19:23:01,793 - INFO - Server shut down
+2024-12-07 19:23:07,836 - INFO - Server started listening
+2024-12-07 19:23:13,091 - INFO - New player joined: ('127.0.0.1', 55359)
+2024-12-07 19:23:13,096 - INFO - Server ready to write
+2024-12-07 19:23:13,096 - INFO - Username registered: Diego
+2024-12-07 19:23:13,097 - INFO - Server ready to read
+2024-12-07 19:26:20,490 - INFO - Server closed by user
+2024-12-07 19:26:20,492 - INFO - Server shut down
+2024-12-07 19:26:25,379 - INFO - Server started listening
+2024-12-07 19:26:32,170 - INFO - New player joined: ('127.0.0.1', 55443)
+2024-12-07 19:26:32,170 - INFO - Server ready to write
+2024-12-07 19:26:32,171 - INFO - Username registered: Diego16
+2024-12-07 19:26:32,171 - INFO - Server ready to read
+2024-12-07 19:27:54,010 - INFO - Server closed by user
+2024-12-07 19:27:54,012 - INFO - Server shut down
+2024-12-07 19:28:28,011 - INFO - Server started listening
+2024-12-07 19:28:34,037 - INFO - New player joined: ('127.0.0.1', 55472)
+2024-12-07 19:28:34,037 - INFO - Server ready to write
+2024-12-07 19:28:34,037 - INFO - Username registered: Diego18
+2024-12-07 19:28:34,038 - INFO - Server ready to read
+2024-12-07 19:30:26,382 - INFO - Player left the server
+2024-12-07 19:30:26,383 - ERROR - Error handling client: Peer closed.
+2024-12-07 19:30:31,957 - INFO - New player joined: ('127.0.0.1', 55511)
+2024-12-07 19:30:31,958 - INFO - Server ready to write
+2024-12-07 19:30:31,958 - INFO - Username registered: Diego19
+2024-12-07 19:30:31,958 - INFO - Server ready to read
+2024-12-07 19:34:54,616 - INFO - Player left the server
+2024-12-07 19:34:54,618 - ERROR - Error handling client: Peer closed.
+2024-12-07 19:34:59,600 - INFO - New player joined: ('127.0.0.1', 55581)
+2024-12-07 19:34:59,601 - INFO - Server ready to write
+2024-12-07 19:34:59,601 - INFO - Username registered: Diego20
+2024-12-07 19:34:59,601 - INFO - Server ready to read
+2024-12-07 19:35:35,520 - INFO - Player left the server
+2024-12-07 19:35:35,521 - ERROR - Error handling client: Peer closed.
+2024-12-07 19:35:47,102 - INFO - New player joined: ('127.0.0.1', 55591)
+2024-12-07 19:35:47,104 - INFO - Server ready to write
+2024-12-07 19:35:47,104 - INFO - Username registered: Diego
+2024-12-07 19:35:47,104 - INFO - Server ready to read
+2024-12-07 21:02:17,746 - INFO - Player left the server
+2024-12-07 21:02:17,748 - ERROR - Error handling client: Peer closed.
+2024-12-07 21:02:23,059 - INFO - New player joined: ('127.0.0.1', 56206)
+2024-12-07 21:02:23,062 - INFO - Server ready to write
+2024-12-07 21:02:23,062 - INFO - Username registered: Diego20
+2024-12-07 21:02:23,063 - INFO - Server ready to read
+2024-12-08 23:37:20,485 - INFO - Server closed by user
+2024-12-08 23:37:20,488 - INFO - Server shut down
+2024-12-08 23:37:22,595 - INFO - Server started listening
+2024-12-08 23:37:22,602 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1235
+ * Running on http://10.0.0.233:1235
+2024-12-08 23:37:22,602 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-08 23:37:34,512 - INFO - Server closed by user
+2024-12-08 23:37:34,514 - INFO - Server shut down
+2024-12-08 23:50:20,284 - INFO - Server started listening
+2024-12-08 23:50:20,292 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1235
+ * Running on http://10.0.0.233:1235
+2024-12-08 23:50:20,292 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-08 23:55:34,038 - INFO - New player joined: ('127.0.0.1', 51407)
+2024-12-08 23:55:34,042 - INFO - Server ready to write
+2024-12-08 23:55:34,042 - INFO - Username registered: Diego
+2024-12-08 23:55:34,043 - INFO - Server ready to read
+2024-12-09 07:53:24,809 - INFO - Server closed by user
+2024-12-09 07:53:24,814 - INFO - Server shut down
+2024-12-09 07:59:06,823 - INFO - Server started listening
+2024-12-09 07:59:06,830 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1235
+ * Running on http://10.0.0.233:1235
+2024-12-09 07:59:06,830 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 07:59:17,977 - INFO - Server closed by user
+2024-12-09 07:59:17,978 - INFO - Server shut down
+2024-12-09 07:59:25,512 - INFO - Server started listening
+2024-12-09 07:59:25,517 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1235
+ * Running on http://10.0.0.233:1235
+2024-12-09 07:59:25,517 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 07:59:43,022 - INFO - New player joined: ('127.0.0.1', 54003)
+2024-12-09 07:59:43,023 - INFO - New player joined: ('127.0.0.1', 54004)
+2024-12-09 07:59:43,028 - INFO - Player left the server
+2024-12-09 07:59:43,028 - ERROR - Error handling client: Peer closed.
+2024-12-09 07:59:43,028 - INFO - Player left the server
+2024-12-09 07:59:43,028 - ERROR - Error handling client: Peer closed.
+2024-12-09 07:59:49,843 - INFO - Server closed by user
+2024-12-09 07:59:49,843 - INFO - Server shut down
+2024-12-09 08:19:58,210 - INFO - Server started listening
+2024-12-09 08:19:58,217 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1235
+ * Running on http://10.0.0.233:1235
+2024-12-09 08:19:58,217 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 08:20:06,954 - INFO - Game started by Diego
+2024-12-09 08:20:06,955 - INFO - 127.0.0.1 - - [09/Dec/2024 08:20:06] "POST /start HTTP/1.1" 200 -
+2024-12-09 08:25:41,629 - INFO - New player joined: ('127.0.0.1', 54291)
+2024-12-09 08:25:41,630 - INFO - New player joined: ('127.0.0.1', 54292)
+2024-12-09 08:25:41,631 - INFO - New player joined: ('127.0.0.1', 54343)
+2024-12-09 08:25:41,637 - INFO - Player left the server
+2024-12-09 08:25:41,637 - ERROR - Error handling client: [Errno 54] Connection reset by peer
+2024-12-09 08:25:41,637 - INFO - Player left the server
+2024-12-09 08:25:41,637 - ERROR - Error handling client: [Errno 54] Connection reset by peer
+2024-12-09 08:25:41,637 - INFO - New player joined: ('127.0.0.1', 54344)
+2024-12-09 08:25:41,637 - INFO - New player joined: ('127.0.0.1', 54345)
+2024-12-09 08:25:41,638 - INFO - Player left the server
+2024-12-09 08:25:41,638 - ERROR - Error handling client: Peer closed.
+2024-12-09 08:25:41,638 - INFO - Player left the server
+2024-12-09 08:25:41,638 - ERROR - Error handling client: Peer closed.
+2024-12-09 08:25:41,638 - INFO - New player joined: ('127.0.0.1', 54346)
+2024-12-09 08:25:41,638 - INFO - Player left the server
+2024-12-09 08:25:41,638 - ERROR - Error handling client: Peer closed.
+2024-12-09 08:25:50,921 - INFO - Server closed by user
+2024-12-09 08:25:50,924 - INFO - Server shut down
+2024-12-09 08:25:55,684 - INFO - Server started listening
+2024-12-09 08:25:55,693 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1235
+ * Running on http://10.0.0.233:1235
+2024-12-09 08:25:55,693 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 08:26:54,569 - INFO - New player joined: ('127.0.0.1', 54355)
+2024-12-09 08:26:54,570 - INFO - New player joined: ('127.0.0.1', 54356)
+2024-12-09 08:26:54,571 - INFO - New player joined: ('127.0.0.1', 54357)
+2024-12-09 08:26:54,574 - INFO - Player left the server
+2024-12-09 08:26:54,574 - ERROR - Error handling client: Peer closed.
+2024-12-09 08:26:54,574 - INFO - Player left the server
+2024-12-09 08:26:54,574 - ERROR - Error handling client: Peer closed.
+2024-12-09 08:26:54,575 - INFO - New player joined: ('127.0.0.1', 54358)
+2024-12-09 08:26:54,575 - INFO - Player left the server
+2024-12-09 08:26:54,575 - ERROR - Error handling client: Peer closed.
+2024-12-09 08:26:55,688 - INFO - Server closed by user
+2024-12-09 08:26:55,689 - INFO - Server shut down
+2024-12-09 08:48:29,620 - INFO - Server started listening
+2024-12-09 08:48:29,625 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 08:48:29,625 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 08:50:56,473 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/diego/Desktop/CS457/CS457_Game/server.py", line 38, in index
+    return render_template('index.html')
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/diego/Library/Python/3.9/lib/python/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2024-12-09 08:50:56,494 - INFO - 127.0.0.1 - - [09/Dec/2024 08:50:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-12-09 08:50:56,735 - INFO - 127.0.0.1 - - [09/Dec/2024 08:50:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-09 08:53:33,501 - INFO - New player joined: ('127.0.0.1', 54757)
+2024-12-09 08:53:33,502 - INFO - New player joined: ('127.0.0.1', 54758)
+2024-12-09 08:53:33,512 - INFO - Player left the server
+2024-12-09 08:53:33,512 - ERROR - Error handling client: [Errno 54] Connection reset by peer
+2024-12-09 08:53:33,512 - INFO - Player left the server
+2024-12-09 08:53:33,512 - ERROR - Error handling client: [Errno 54] Connection reset by peer
+2024-12-09 08:53:35,474 - INFO - Server closed by user
+2024-12-09 08:53:35,474 - INFO - Server shut down
+2024-12-09 08:53:38,585 - INFO - Server started listening
+2024-12-09 08:53:38,590 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 08:53:38,590 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 08:53:40,680 - INFO - 127.0.0.1 - - [09/Dec/2024 08:53:40] "GET / HTTP/1.1" 200 -
+2024-12-09 08:53:40,732 - INFO - 127.0.0.1 - - [09/Dec/2024 08:53:40] "GET /static/style.css HTTP/1.1" 200 -
+2024-12-09 08:53:47,449 - INFO - Game started by diego
+2024-12-09 08:53:47,449 - INFO - 127.0.0.1 - - [09/Dec/2024 08:53:47] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:00:13,920 - INFO - Server closed by user
+2024-12-09 09:00:13,921 - INFO - Server shut down
+2024-12-09 09:00:16,898 - INFO - Server started listening
+2024-12-09 09:00:16,903 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:00:16,903 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:00:24,210 - INFO - 127.0.0.1 - - [09/Dec/2024 09:00:24] "GET / HTTP/1.1" 200 -
+2024-12-09 09:00:24,291 - INFO - 127.0.0.1 - - [09/Dec/2024 09:00:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:00:28,375 - INFO - Game started by Diego
+2024-12-09 09:00:28,376 - INFO - 127.0.0.1 - - [09/Dec/2024 09:00:28] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:00:42,760 - INFO - 127.0.0.1 - - [09/Dec/2024 09:00:42] "POST /join HTTP/1.1" 200 -
+2024-12-09 09:00:46,808 - INFO - 127.0.0.1 - - [09/Dec/2024 09:00:46] "[31m[1mGET /next_question HTTP/1.1[0m" 405 -
+2024-12-09 09:00:47,959 - INFO - 127.0.0.1 - - [09/Dec/2024 09:00:47] "[31m[1mGET /next_question HTTP/1.1[0m" 405 -
+2024-12-09 09:02:56,946 - INFO - Server closed by user
+2024-12-09 09:02:56,948 - INFO - Server shut down
+2024-12-09 09:02:58,469 - INFO - Server started listening
+2024-12-09 09:02:58,474 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:02:58,474 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:03:00,272 - INFO - 127.0.0.1 - - [09/Dec/2024 09:03:00] "GET / HTTP/1.1" 200 -
+2024-12-09 09:03:00,307 - INFO - 127.0.0.1 - - [09/Dec/2024 09:03:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:03:04,089 - INFO - Game started by Diego
+2024-12-09 09:03:04,090 - INFO - 127.0.0.1 - - [09/Dec/2024 09:03:04] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:03:10,257 - INFO - 127.0.0.1 - - [09/Dec/2024 09:03:10] "[31m[1mPOST /submit_answer HTTP/1.1[0m" 400 -
+2024-12-09 09:06:11,603 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:11] "[31m[1mGET /next_question HTTP/1.1[0m" 405 -
+2024-12-09 09:06:18,343 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:18] "[31m[1mPOST /submit_answer HTTP/1.1[0m" 400 -
+2024-12-09 09:06:22,844 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:22] "[31m[1mGET /current_question HTTP/1.1[0m" 405 -
+2024-12-09 09:06:23,344 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:23] "[31m[1mGET /current_question HTTP/1.1[0m" 405 -
+2024-12-09 09:06:23,746 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:23] "GET /game_status HTTP/1.1" 200 -
+2024-12-09 09:06:31,894 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:31] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:06:35,208 - INFO - Jose successfully joined the game
+2024-12-09 09:06:35,208 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:35] "POST /join HTTP/1.1" 200 -
+2024-12-09 09:06:38,477 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:38] "GET /game_status HTTP/1.1" 200 -
+2024-12-09 09:06:46,267 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:46] "GET / HTTP/1.1" 200 -
+2024-12-09 09:06:46,302 - INFO - 127.0.0.1 - - [09/Dec/2024 09:06:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:11:33,449 - INFO - Server closed by user
+2024-12-09 09:11:33,452 - INFO - Server shut down
+2024-12-09 09:11:36,622 - INFO - Server started listening
+2024-12-09 09:11:36,627 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:11:36,627 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:11:38,702 - INFO - 127.0.0.1 - - [09/Dec/2024 09:11:38] "GET / HTTP/1.1" 200 -
+2024-12-09 09:11:38,747 - INFO - 127.0.0.1 - - [09/Dec/2024 09:11:38] "GET /static/style.css HTTP/1.1" 200 -
+2024-12-09 09:11:45,126 - INFO - Game started by Diego
+2024-12-09 09:11:45,132 - INFO - 127.0.0.1 - - [09/Dec/2024 09:11:45] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:11:55,131 - INFO - 127.0.0.1 - - [09/Dec/2024 09:11:55] "[31m[1mPOST /submit_answer HTTP/1.1[0m" 400 -
+2024-12-09 09:12:03,096 - INFO - Server closed by user
+2024-12-09 09:12:03,096 - INFO - Server shut down
+2024-12-09 09:14:34,899 - INFO - Server started listening
+2024-12-09 09:14:34,904 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:14:34,904 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:14:38,411 - INFO - 127.0.0.1 - - [09/Dec/2024 09:14:38] "GET / HTTP/1.1" 200 -
+2024-12-09 09:14:38,460 - INFO - 127.0.0.1 - - [09/Dec/2024 09:14:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:14:40,751 - INFO - Game started by Diego
+2024-12-09 09:14:40,752 - INFO - 127.0.0.1 - - [09/Dec/2024 09:14:40] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:14:48,053 - INFO - 127.0.0.1 - - [09/Dec/2024 09:14:48] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:14:53,300 - INFO - 127.0.0.1 - - [09/Dec/2024 09:14:53] "[31m[1mGET /next_question HTTP/1.1[0m" 405 -
+2024-12-09 09:14:55,716 - INFO - 127.0.0.1 - - [09/Dec/2024 09:14:55] "[31m[1mGET /next_question HTTP/1.1[0m" 405 -
+2024-12-09 09:14:57,432 - INFO - 127.0.0.1 - - [09/Dec/2024 09:14:57] "GET /game_status HTTP/1.1" 200 -
+2024-12-09 09:14:59,165 - INFO - 127.0.0.1 - - [09/Dec/2024 09:14:59] "GET /game_status HTTP/1.1" 200 -
+2024-12-09 09:15:02,066 - INFO - 127.0.0.1 - - [09/Dec/2024 09:15:02] "[31m[1mGET /next_question HTTP/1.1[0m" 405 -
+2024-12-09 09:15:03,315 - INFO - 127.0.0.1 - - [09/Dec/2024 09:15:03] "[31m[1mGET /current_question HTTP/1.1[0m" 405 -
+2024-12-09 09:15:03,949 - INFO - 127.0.0.1 - - [09/Dec/2024 09:15:03] "[31m[1mGET /current_question HTTP/1.1[0m" 405 -
+2024-12-09 09:18:24,571 - INFO - Server closed by user
+2024-12-09 09:18:24,574 - INFO - Server shut down
+2024-12-09 09:18:25,677 - INFO - Server started listening
+2024-12-09 09:18:25,682 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:18:25,682 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:18:28,450 - INFO - 127.0.0.1 - - [09/Dec/2024 09:18:28] "GET / HTTP/1.1" 200 -
+2024-12-09 09:18:28,494 - INFO - 127.0.0.1 - - [09/Dec/2024 09:18:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:18:33,955 - INFO - Diego successfully joined the game
+2024-12-09 09:18:33,955 - INFO - 127.0.0.1 - - [09/Dec/2024 09:18:33] "POST /join HTTP/1.1" 200 -
+2024-12-09 09:18:36,049 - INFO - 127.0.0.1 - - [09/Dec/2024 09:18:36] "[31m[1mGET /next_question HTTP/1.1[0m" 405 -
+2024-12-09 09:18:42,514 - INFO - 127.0.0.1 - - [09/Dec/2024 09:18:42] "GET /current_question HTTP/1.1" 200 -
+2024-12-09 09:18:43,681 - INFO - 127.0.0.1 - - [09/Dec/2024 09:18:43] "GET /current_question HTTP/1.1" 200 -
+2024-12-09 09:18:47,552 - INFO - Game started by Diego
+2024-12-09 09:18:47,553 - INFO - 127.0.0.1 - - [09/Dec/2024 09:18:47] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:18:58,102 - INFO - 127.0.0.1 - - [09/Dec/2024 09:18:58] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:19:00,431 - INFO - 127.0.0.1 - - [09/Dec/2024 09:19:00] "GET /current_question HTTP/1.1" 200 -
+2024-12-09 09:19:01,816 - INFO - 127.0.0.1 - - [09/Dec/2024 09:19:01] "[31m[1mGET /next_question HTTP/1.1[0m" 405 -
+2024-12-09 09:20:47,393 - INFO - Server closed by user
+2024-12-09 09:20:47,395 - INFO - Server shut down
+2024-12-09 09:20:48,995 - INFO - Server started listening
+2024-12-09 09:20:49,000 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:20:49,000 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:20:50,540 - INFO - 127.0.0.1 - - [09/Dec/2024 09:20:50] "GET / HTTP/1.1" 200 -
+2024-12-09 09:20:50,588 - INFO - 127.0.0.1 - - [09/Dec/2024 09:20:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:20:53,933 - INFO - Game started by Diego
+2024-12-09 09:20:53,934 - INFO - 127.0.0.1 - - [09/Dec/2024 09:20:53] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:21:04,840 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:04] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:21:06,997 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:06] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:21:12,206 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:12] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:21:13,427 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:13] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:21:18,211 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:18] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:21:19,165 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:19] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:21:26,208 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:26] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:21:27,515 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:27] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:21:35,730 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:35] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:21:36,731 - INFO - Quiz is over
+2024-12-09 09:21:36,732 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:36] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:21:38,214 - INFO - Quiz is over
+2024-12-09 09:21:38,214 - INFO - 127.0.0.1 - - [09/Dec/2024 09:21:38] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:21:48,051 - INFO - Server closed by user
+2024-12-09 09:21:48,052 - INFO - Server shut down
+2024-12-09 09:37:53,606 - INFO - Server started listening
+2024-12-09 09:37:53,612 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:37:53,612 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:37:58,790 - INFO - 127.0.0.1 - - [09/Dec/2024 09:37:58] "GET / HTTP/1.1" 200 -
+2024-12-09 09:37:58,851 - INFO - 127.0.0.1 - - [09/Dec/2024 09:37:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:38:04,532 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:04] "POST /join HTTP/1.1" 200 -
+2024-12-09 09:38:06,683 - INFO - Game started by Diego
+2024-12-09 09:38:06,684 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:06] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:38:11,804 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:11] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:38:13,913 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:13] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:38:18,247 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:18] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:38:20,395 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:20] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:38:24,831 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:24] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:38:26,128 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:26] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:38:36,970 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:36] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:38:38,712 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:38] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:38:42,936 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:42] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:38:44,495 - INFO - Quiz is over
+2024-12-09 09:38:44,496 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:44] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:38:46,830 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:46] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:38:47,796 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:47] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:38:48,062 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:48] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:38:48,295 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:48] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:38:49,112 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:49] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:38:49,346 - INFO - 127.0.0.1 - - [09/Dec/2024 09:38:49] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:39:30,248 - INFO - Server closed by user
+2024-12-09 09:39:30,250 - INFO - Server shut down
+2024-12-09 09:39:32,388 - INFO - Server started listening
+2024-12-09 09:39:32,393 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:64322
+2024-12-09 09:39:32,393 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-09 09:39:35,351 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:35] "GET / HTTP/1.1" 200 -
+2024-12-09 09:39:35,410 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-09 09:39:39,641 - INFO - Game started by Diego
+2024-12-09 09:39:39,642 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:39] "POST /start HTTP/1.1" 200 -
+2024-12-09 09:39:47,063 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:47] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:39:48,163 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:48] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:39:49,812 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:49] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:39:51,246 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:51] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:39:51,995 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:51] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:39:55,061 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:55] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:39:59,079 - INFO - 127.0.0.1 - - [09/Dec/2024 09:39:59] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:40:02,822 - INFO - 127.0.0.1 - - [09/Dec/2024 09:40:02] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:40:04,011 - INFO - 127.0.0.1 - - [09/Dec/2024 09:40:04] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:40:09,141 - INFO - 127.0.0.1 - - [09/Dec/2024 09:40:09] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:40:10,429 - INFO - 127.0.0.1 - - [09/Dec/2024 09:40:10] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:40:14,161 - INFO - 127.0.0.1 - - [09/Dec/2024 09:40:14] "POST /submit_answer HTTP/1.1" 200 -
+2024-12-09 09:40:15,211 - INFO - Quiz is over
+2024-12-09 09:40:15,212 - INFO - 127.0.0.1 - - [09/Dec/2024 09:40:15] "POST /next_question HTTP/1.1" 200 -
+2024-12-09 09:40:16,695 - INFO - 127.0.0.1 - - [09/Dec/2024 09:40:16] "[33mGET /leaderboard HTTP/1.1[0m" 404 -
+2024-12-09 09:40:20,159 - INFO - Server closed by user
+2024-12-09 09:40:20,160 - INFO - Server shut down
