@@ -1,24 +1,27 @@
 # CS457_Game
-# Quiz Game Example
+# Quiz Game
 
 This is a simple Quiz game implemented using Python and sockets.
 
 **How to play:**
-1. **Start the server:** Run the `server.py` script.
-2. **Connect clients:** Run the `client.py` script on two different machines or terminals.
-3. **Play the game:** Players take turns entering their moves. The player with most correct answers wins!
+1. **Start the server:** Run the `server.py` script by calling the file and using host and post for your parameters. E.G.("server 0.0.0.0 12345").
+2. **Connect clients:** Enter the host and port used on a webbrowser of format("http://host:port")
+3. **Starting the game:** Before a game can be played you must start the game using the start game button
+4. **Play the game:** Players take turns entering their moves. The player with most correct answers wins!
 
 **Technologies used:**
 * Python
 * Sockets
+* HTTP
 
 **Additional resources:**
 * [Link to Python documentation]
 * [Link to sockets tutorial]
+* https://flask.palletsprojects.com/en/stable/
     
 # Statement of Work (SOW) Template for Socket Programming Project
 Project Title:
-* Dynamite Battleship Guardians
+* Quiz Mania
 
 Team:
 * Diego Celorio
@@ -63,3 +66,21 @@ Communication Plan:
   
 Additional Notes:
 * Hope you enjoy!
+
+
+## Road Map
+First Epic: First and foremost the most important thing is to go back and refactor and clean the code, make sure everything works as intended
+
+Second Epic: This epic would entail encryption to ensure messages are encrypted during transmission.
+
+Later will come adding more features, more interactive gameplay, and a way to keep score more accurately and give more points to players who answer first.
+
+## Retrospective
+**What went well**
+
+The server and client architecture went well and having multiple classes helped keep the code clean and less confusing. I went back to fix and clean up the initial mess as it had gotten too convoluted too quickly. Adding the webserver functionality went surprisingly smoothly.
+
+**What could be improved on**
+
+I should improve my scope as my original scope was too large. This was quite costly as we were far into the semester and I had to reduce the scope significantly. I also should work on developing cleaner code with comments. This will allow for projects to be more scalable and easier to maintain as this was the main issue I ran into. The code was quite messy and it was unclear what did what making it hard to build upon the existing code.
+ 
